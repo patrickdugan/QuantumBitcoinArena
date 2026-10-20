@@ -5,13 +5,17 @@
 //! a garbler reveals: per-bit Lamport, Antichain Winternitz (ACW), and the
 //! Schnorr-adaptor reveal used by Mosaic today (cost model only). See `docs/`.
 
+#![forbid(unsafe_code)]
+
 pub mod baseline;
 pub mod codeword;
 pub mod exec;
 pub mod gadget;
 pub mod hash;
 pub mod metrics;
+pub mod rpc;
 pub mod scheme;
+pub mod security;
 pub mod taproot;
 
 pub use codeword::CodewordSpace;

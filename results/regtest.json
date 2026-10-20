@@ -1,0 +1,199 @@
+{
+  "negative": [
+    {
+      "attack": "forged_other_value",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "lamport-ripemd160"
+    },
+    {
+      "attack": "missing_item",
+      "reason": "mempool-script-verify-flag-failed (OP_IF/NOTIF argument must be minimal in tapscript)",
+      "rejected": true,
+      "scheme": "lamport-ripemd160"
+    },
+    {
+      "attack": "extra_item",
+      "reason": "mempool-script-verify-flag-failed (Stack size must be exactly one after execution)",
+      "rejected": true,
+      "scheme": "lamport-ripemd160"
+    },
+    {
+      "attack": "short_opener",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "lamport-ripemd160"
+    },
+    {
+      "attack": "forged_other_value",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "acw-k4-l8-hash160"
+    },
+    {
+      "attack": "missing_item",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "acw-k4-l8-hash160"
+    },
+    {
+      "attack": "extra_item",
+      "reason": "mempool-script-verify-flag-failed (Stack size must be exactly one after execution)",
+      "rejected": true,
+      "scheme": "acw-k4-l8-hash160"
+    },
+    {
+      "attack": "short_opener",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "acw-k4-l8-hash160"
+    },
+    {
+      "attack": "forged_other_value",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "acw-k2-l16-hash160"
+    },
+    {
+      "attack": "missing_item",
+      "reason": "mempool-script-verify-flag-failed (Script number overflowed or is non-minimally encoded)",
+      "rejected": true,
+      "scheme": "acw-k2-l16-hash160"
+    },
+    {
+      "attack": "extra_item",
+      "reason": "mempool-script-verify-flag-failed (Stack size must be exactly one after execution)",
+      "rejected": true,
+      "scheme": "acw-k2-l16-hash160"
+    },
+    {
+      "attack": "short_opener",
+      "reason": "mempool-script-verify-flag-failed (Script failed an OP_EQUALVERIFY operation)",
+      "rejected": true,
+      "scheme": "acw-k2-l16-hash160"
+    }
+  ],
+  "node": {
+    "subversion": "/Satoshi:31.1.0/",
+    "version": 310100
+  },
+  "policy_vs_consensus": {
+    "non_minimal_number": {
+      "consensus_valid_mined": true,
+      "policy_rejects": true,
+      "reject_reason": "mempool-script-verify-flag-failed (Script number overflowed or is non-minimally encoded)"
+    }
+  },
+  "positive_1024_bit": [
+    {
+      "confirmed": true,
+      "core_vsize": 18499,
+      "inputs": 3,
+      "nbits": 1024,
+      "our_weight_wu": 73995,
+      "scheme": "lamport-ripemd160",
+      "transactions": 1,
+      "txids": [
+        "\"fc6c056a41e964f076ea794c534b0e36fbd343b5febd398b00f268da37d09b9d\""
+      ]
+    },
+    {
+      "confirmed": true,
+      "core_vsize": 18064,
+      "inputs": 2,
+      "nbits": 1024,
+      "our_weight_wu": 72254,
+      "scheme": "lamport-nobit-ripemd160",
+      "transactions": 1,
+      "txids": [
+        "\"c582b75624f54fcd89c3b16d03ce42294c6a1d80fe3f8e96b70fc9be87864082\""
+      ]
+    },
+    {
+      "confirmed": true,
+      "core_vsize": 11677,
+      "inputs": 1,
+      "nbits": 1024,
+      "our_weight_wu": 46707,
+      "scheme": "acw-k2-l16-hash160",
+      "transactions": 1,
+      "txids": [
+        "\"4e6ef1ca3354c180289ce27071ea10914fa8994cb5591b33c4d6c613c28d234b\""
+      ]
+    },
+    {
+      "confirmed": true,
+      "core_vsize": 9657,
+      "inputs": 1,
+      "nbits": 1024,
+      "our_weight_wu": 38627,
+      "scheme": "acw-k4-l8-hash160",
+      "transactions": 1,
+      "txids": [
+        "\"20cb3e45b6cc7ffb748fbb4fca953dda1c171d9489839fe2ed388e02f7feebc8\""
+      ]
+    },
+    {
+      "confirmed": true,
+      "core_vsize": 8735,
+      "inputs": 1,
+      "nbits": 1024,
+      "our_weight_wu": 34938,
+      "scheme": "acw-k4-l16-hash160",
+      "transactions": 1,
+      "txids": [
+        "\"afaba4f250e2692b5abc1349595322655a250a9840f45e7f8bdcffba4623c3be\""
+      ]
+    },
+    {
+      "confirmed": true,
+      "core_vsize": 10991,
+      "inputs": 1,
+      "nbits": 1024,
+      "our_weight_wu": 43962,
+      "scheme": "acw-k4-l16-sha256",
+      "transactions": 1,
+      "txids": [
+        "\"70d503c6d0d9ebf3150cf468e2742d189d34f0937dd56b6300c6c8d3d3d45f68\""
+      ]
+    }
+  ],
+  "stack_limit": [
+    {
+      "core_max_bits": 998,
+      "core_max_digits": 998,
+      "core_max_items": 998,
+      "interpreter_max_digits": 999,
+      "items_per_digit": 1,
+      "reject_reason_above": "mempool-script-verify-flag-failed (Stack size limit exceeded)",
+      "scheme": "lamport-nobit-ripemd160"
+    },
+    {
+      "core_max_bits": 500,
+      "core_max_digits": 500,
+      "core_max_items": 1000,
+      "interpreter_max_digits": 500,
+      "items_per_digit": 2,
+      "reject_reason_above": "mempool-script-verify-flag-failed (Stack size limit exceeded)",
+      "scheme": "lamport-ripemd160"
+    },
+    {
+      "core_max_bits": 1136,
+      "core_max_digits": 142,
+      "core_max_items": 994,
+      "interpreter_max_digits": 142,
+      "items_per_digit": 7,
+      "reject_reason_above": "mempool-script-verify-flag-failed (Stack size limit exceeded)",
+      "scheme": "acw-k4-l8-hash160"
+    },
+    {
+      "core_max_bits": 1562,
+      "core_max_digits": 142,
+      "core_max_items": 994,
+      "interpreter_max_digits": 142,
+      "items_per_digit": 7,
+      "reject_reason_above": "mempool-script-verify-flag-failed (Stack size limit exceeded)",
+      "scheme": "acw-k4-l16-hash160"
+    }
+  ]
+}

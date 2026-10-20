@@ -231,6 +231,18 @@ impl SecretKey {
         self.scheme.hash().iterate(&self.secret(digit, chain), i)
     }
 
+    /// All elements `x_0..=x_L` of one ACW chain (`x_0` is the secret; never publish it).
+    pub fn chain_elements(&self, digit: usize, chain: usize, l: u32) -> Vec<Digest> {
+        let hk = self.scheme.hash();
+        let mut v = Vec::with_capacity(l as usize + 1);
+        v.push(self.secret(digit, chain));
+        for i in 0..l as usize {
+            let next = hk.digest(&v[i]);
+            v.push(next);
+        }
+        v
+    }
+
     /// Public commitment.
     pub fn commit(&self) -> Commitment {
         let hk = self.scheme.hash();
@@ -576,6 +588,80 @@ mod tests {
         for v in 0..(1u64 << s.bits_per_digit()) {
             let o = sk.open_digit(0, v);
             assert_eq!(com.verify_digit(0, &o).unwrap().value, v);
+        }
+    }
+}
+
+/// Decode a Script number (up to 4 bytes). `None` for longer or oversized values.
+pub fn decode_scriptnum(b: &[u8]) -> Option<i64> {
+    if b.is_empty() {
+        return Some(0);
+    }
+    if b.len() > 4 {
+        return None;
+    }
+    let mut v: i64 = 0;
+    for (i, &x) in b.iter().enumerate() {
+        v |= i64::from(if i == b.len() - 1 { x & 0x7f } else { x }) << (8 * i);
+    }
+    if b[b.len() - 1] & 0x80 != 0 {
+        v = -v;
+    }
+    Some(v)
+}
+
+impl Opening {
+    /// Inverse of [`Opening::witness_stack`]: rebuild an opening from the initial witness
+    /// stack read off a confirmed transaction. `None` if the item count is not a whole
+    /// number of digits or a posted number is not a Script number.
+    pub fn from_witness_stack(scheme: &Scheme, stack: &[Vec<u8>]) -> Option<Opening> {
+        let per = scheme.witness_items_per_digit();
+        if stack.len() % per != 0 {
+            return None;
+        }
+        let mut digits = vec![];
+        // Digit 0 occupies the last `per` items (it is on top of the stack).
+        for chunk in stack.chunks(per).rev() {
+            digits.push(match scheme {
+                Scheme::Lamport { .. } => DigitOpening { openers: vec![chunk[0].clone()], posted: vec![decode_scriptnum(&chunk[1])?] },
+                Scheme::LamportNoBit { .. } => DigitOpening { openers: vec![chunk[0].clone()], posted: vec![] },
+                Scheme::Acw { k, .. } => {
+                    let k = *k as usize;
+                    // push order: opener_{k-1}, then for j = k-2..=0: opener_j, posted_j
+                    let mut openers = vec![Vec::new(); k];
+                    let mut posted = vec![0i64; k - 1];
+                    openers[k - 1] = chunk[0].clone();
+                    for (i, j) in (0..k - 1).rev().enumerate() {
+                        openers[j] = chunk[1 + 2 * i].clone();
+                        posted[j] = decode_scriptnum(&chunk[2 + 2 * i])?;
+                    }
+                    DigitOpening { openers, posted }
+                }
+            });
+        }
+        Some(Opening { digits })
+    }
+}
+
+#[cfg(test)]
+mod witness_tests {
+    use super::*;
+
+    #[test]
+    fn witness_stack_roundtrips() {
+        for s in [
+            Scheme::Lamport { hash: HashKind::Ripemd160 },
+            Scheme::LamportNoBit { hash: HashKind::Ripemd160 },
+            Scheme::Acw { k: 4, l: 8, hash: HashKind::Hash160 },
+            Scheme::Acw { k: 2, l: 16, hash: HashKind::Sha256 },
+        ] {
+            let sk = SecretKey::for_bits(s, [4u8; 32], 50);
+            let o = sk.open_bits(&(0..50).map(|i| i % 3 == 1).collect::<Vec<_>>());
+            let back = Opening::from_witness_stack(&s, &o.witness_stack(&s)).unwrap();
+            assert_eq!(back, o, "{}", s.name());
+        }
+        for v in [-70000i64, -128, -1, 0, 1, 127, 128, 255, 256, 70000] {
+            assert_eq!(decode_scriptnum(&scriptnum(v)), Some(v));
         }
     }
 }

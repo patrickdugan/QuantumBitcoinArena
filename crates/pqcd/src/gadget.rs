@@ -114,11 +114,17 @@ pub fn build_digit_table(
     let payloads: Vec<Vec<u8>> = (0..nv as u64).map(payload).collect();
     let plen = payloads[0].len();
     assert!(payloads.iter().all(|p| p.len() == plen), "payloads must share a length");
+    let elems: Vec<Vec<Digest>> = (0..k as usize).map(|j| sk.chain_elements(d, j, l)).collect();
     let mut rows: Vec<Vec<u8>> = Vec::with_capacity(n);
+    let mut seed = Vec::with_capacity(k as usize * sk.scheme.hash().len());
     for r in 0..n {
         let c = sp.unrank(r as u128).unwrap();
         let v = (r & (nv - 1)) as usize; // rank mod 2^bits, the total value map
-        let p = pad(&seed_of(sk, d, &c), &cx, plen);
+        seed.clear();
+        for (j, &a) in c.iter().enumerate() {
+            seed.extend_from_slice(&elems[j][(l - a) as usize]);
+        }
+        let p = pad(&seed, &cx, plen);
         rows.push(p.iter().zip(&payloads[v]).map(|(a, b)| a ^ b).collect::<Vec<u8>>());
     }
     let leaves: Vec<[u8; 32]> = rows.iter().enumerate().map(|(r, row)| leaf_hash(row, r)).collect();

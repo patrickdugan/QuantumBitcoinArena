@@ -1,0 +1,26 @@
+{
+  "description": "BIP-340 signature per 8-bit wide label, OP_CODESEPARATOR for distinct sighashes; accepted by Core testmempoolaccept",
+  "rows": [
+    {
+      "bits": 128,
+      "core_vsize": 492,
+      "model_weight_wu": 1888,
+      "per_bit_vb": 3.84375,
+      "wires": 16
+    },
+    {
+      "bits": 1024,
+      "core_vsize": 3292,
+      "model_weight_wu": 13088,
+      "per_bit_vb": 3.21484375,
+      "wires": 128
+    },
+    {
+      "bits": 4000,
+      "core_vsize": 12593,
+      "model_weight_wu": 50290,
+      "per_bit_vb": 3.14825,
+      "wires": 500
+    }
+  ]
+}

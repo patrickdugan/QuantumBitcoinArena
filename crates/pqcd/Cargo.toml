@@ -18,5 +18,3 @@ ureq = { version = "2", default-features = false, features = ["json"] }
 [dev-dependencies]
 proptest = "1"
 
-[lints.rust]
-unsafe_code = "forbid"

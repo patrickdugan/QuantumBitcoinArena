@@ -12,7 +12,7 @@ use bitcoin::taproot::{ControlBlock, LeafVersion, TaprootBuilder, TaprootSpendIn
 use bitcoin::transaction::Version;
 use bitcoin::{Amount, OutPoint, ScriptBuf, Sequence, Transaction, TxIn, TxOut, Txid, Witness};
 
-use crate::scheme::{Commitment, Opening, Scheme};
+use crate::scheme::{Commitment, Opening, Scheme, SecretKey};
 
 /// BIP-341 NUMS internal key (`H = lift_x(sha256(G))`), so the key path is provably unspendable.
 pub const NUMS_X: &str = "50929b74c1a04954b78b4b6035e97a5e078a5a0f28ec96d547bfee9ace803ac0";
@@ -140,4 +140,27 @@ pub fn chunk_spend(c: &Commitment, o: &Opening, first: usize, n: usize) -> LeafS
     let cc = slice_commitment(c, first, n);
     let oo = slice_opening(o, first, n);
     LeafSpend { script: cc.verify_script(), stack: oo.witness_stack(&c.scheme) }
+}
+
+/// Largest number of digits whose honest opening still executes under the interpreter's
+/// consensus limits (initial stack <= 1000 items and stack + altstack <= 1000 throughout).
+/// Bisection; the regtest harness confirms the boundary against Bitcoin Core.
+pub fn max_digits_by_execution(scheme: &Scheme) -> usize {
+    use crate::exec::{accepts, Mode};
+    let ok = |n: usize| {
+        let bits = n * scheme.bits_per_digit() as usize;
+        let sk = SecretKey::for_bits(*scheme, [0x42; 32], bits);
+        let com = sk.commit();
+        let msg: Vec<bool> = (0..bits).map(|i| (i * 2654435761usize) >> 7 & 1 == 1).collect();
+        let o = sk.open_bits(&msg);
+        accepts(&com.verify_script(), &o.witness_stack(scheme), Mode::Consensus)
+    };
+    let per = scheme.witness_items_per_digit();
+    let (mut lo, mut hi) = (1usize, MAX_STACK / per + 1);
+    assert!(ok(lo), "a single digit must execute");
+    while lo + 1 < hi {
+        let mid = (lo + hi) / 2;
+        if ok(mid) { lo = mid } else { hi = mid }
+    }
+    lo
 }

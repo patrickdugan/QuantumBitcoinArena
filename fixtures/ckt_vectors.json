@@ -1,0 +1,182 @@
+{
+  "about": "Reproducible vectors: ACW-authenticated input labels evaluated by ckt-gobble. Regenerate with `demo vectors`.",
+  "circuit": {
+    "and": 15,
+    "inputs": 16,
+    "outputs": 1,
+    "semantics": "output = [x == target]; fault secret recoverable iff output = false",
+    "xor": 16
+  },
+  "scenarios": [
+    {
+      "acw_scheme": "acw-k4-l8-hash160",
+      "claim_valid": true,
+      "claim_x": "0xa55a",
+      "commitment_terminals": [
+        [
+          "f75bf68ab05d9d5434b8914d114656ca9a5db6b6",
+          "c7997df2ec6db980eada42cf50e9a197ee9ac30b",
+          "eda5d982856b0c009c11aa6a6af3537e3fd54940",
+          "0e824a7d690a50b81b7a6d0038b92292cbd8726c"
+        ],
+        [
+          "9fbeb2c83f6cd417d8d16d32b5cf2161db6c7c53",
+          "ea7e2e6a5fd99a1a7f015395dd71b686fb4de541",
+          "53bc1952bc4acb11ef224a86012c09fa9e73473d",
+          "ce57fd244db9248b76c84195b94f2998937301fa"
+        ]
+      ],
+      "gc_ciphertexts_digest": "c59232a5ec20a9902df39b564a8d7671e1050cd3e666b09d829f58be2c4b5d41",
+      "input_values": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "leaf_script": "766b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814f75bf68ab05d9d5434b8914d114656ca9a5db6b688766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814c7997df2ec6db980eada42cf50e9a197ee9ac30b88766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814eda5d982856b0c009c11aa6a6af3537e3fd54940885e6c947654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a968140e824a7d690a50b81b7a6d0038b92292cbd8726c88766b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a968149fbeb2c83f6cd417d8d16d32b5cf2161db6c7c5388766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814ea7e2e6a5fd99a1a7f015395dd71b686fb4de54188766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a9681453bc1952bc4acb11ef224a86012c09fa9e73473d885e6c947654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814ce57fd244db9248b76c84195b94f2998937301fa8851",
+      "output_label": "84295096bf3d9802fb1fd4e4a1895954",
+      "output_label_is": "true-label",
+      "output_value": true,
+      "recovered_input_labels": [
+        "613ab4c1f66b1210e1c29755c82e70dd",
+        "b1579de4dc9546f810372bfa91f1d47f",
+        "1ab6e6fb17235f48bdd46bb5bf80cd9e",
+        "d6f3d9fe179a1e7951bcfd4726f8ca86",
+        "02b6b2471a964e04345f2071ec2b193d",
+        "678cc1ea7bd71bea7493dac2c41a1323",
+        "c7b234f505c2808f8ea60c77881dc6d7",
+        "278cd456803a3ea08a42837ca12bf5ca",
+        "eeda5489eadbd0f1b8c827d5692aa480",
+        "ad614429c76354283bed94ea511efbb0",
+        "919925e43bb552f7bcab106ab1d056bd",
+        "40ab479c9f6bd6460592d3429bbfe89d",
+        "cb57b64666c4fe122935070d54c7745e",
+        "795a386e91de76f62bc062aa5eba15f6",
+        "51ecdf612616713cad5cfd1631c99f1e",
+        "461ab2e9f791bdbc5ddf72d397abd0e4"
+      ],
+      "recovered_secret_digest": null,
+      "secret_commitment": "7f972f1d77f74a6d9565726de2302c1c4c2c57198297483dfec3aae96e1b52de",
+      "secret_recovered": false,
+      "seed": "707163642d636b7420726570726f64756369626c652073656564207630303031",
+      "table_roots": [
+        "332727776ce62ca8d75e353d6b2172adeb7e936edbc8e32099a047afc582147c",
+        "bef8b6f417d8eaf1f975ce51c1efa32783e0e19ad4d8590b92ee5941819bd6a5"
+      ],
+      "target": "0xa55a",
+      "witness_stack": [
+        "8ba50627c01bb9a48a4018db6550103f1fab6382",
+        "229d43b35a4fa58c1dfb66e088ca620502803f7a",
+        "04",
+        "fb490a539c1b72ab1a153509ffa178b21772f7ca",
+        "06",
+        "72d3d4b59c96b191faab180d478596df29384dd3",
+        "03",
+        "f9fd128cd99432db7a702d8469ef0e041159f5ae",
+        "9086ec0ce4c99c698632858d7c53c237597c9a9a",
+        "02",
+        "277bcd1cdf57419ab9f92ed0e4256dc1048417fb",
+        "03",
+        "055e09740d35b95c9c6df88ff6abb5011d36c3e2",
+        "02"
+      ]
+    },
+    {
+      "acw_scheme": "acw-k4-l8-hash160",
+      "claim_valid": false,
+      "claim_x": "0xa45a",
+      "commitment_terminals": [
+        [
+          "88ed249a5c77db4c914623e0802c16fae2049615",
+          "aff131c624e8e00c01d56d1b3144edcd1a6b41fb",
+          "0eea8c2ca3417a7c96322e946e0ebda6ea378ec7",
+          "382218dcd51ec9504dab7146d9ec1c1ce0234805"
+        ],
+        [
+          "3f9b51bc54b8721cfb58d3fc07a7a231cedd81fb",
+          "0675b909943a339b5a4b7e9cb0b6115b1a92ec4b",
+          "c0decb088e5cab6cf173973cefe928d447a0c230",
+          "d3e075a42e1e35ccab6a1e86a8fd78c5d6c268bd"
+        ]
+      ],
+      "gc_ciphertexts_digest": "5ab5eedea1d6449f609605a04dbfe64dd4ec2e8b1385d2556ec182dfd945a8e1",
+      "input_values": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "leaf_script": "766b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a9681488ed249a5c77db4c914623e0802c16fae204961588766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814aff131c624e8e00c01d56d1b3144edcd1a6b41fb88766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a968140eea8c2ca3417a7c96322e946e0ebda6ea378ec7885e6c947654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814382218dcd51ec9504dab7146d9ec1c1ce023480588766b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a968143f9b51bc54b8721cfb58d3fc07a7a231cedd81fb88766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a968140675b909943a339b5a4b7e9cb0b6115b1a92ec4b88766c936b7654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814c0decb088e5cab6cf173973cefe928d447a0c230885e6c947654a26354947ca9a9a9a97c687652a26352947ca9a97c6863a96814d3e075a42e1e35ccab6a1e86a8fd78c5d6c268bd8851",
+      "output_label": "895229e8939f7491e1e396cc42dfafd7",
+      "output_label_is": "false-label",
+      "output_value": false,
+      "recovered_input_labels": [
+        "f9a89d2c4f88e65d247244429ce9a0a9",
+        "6ab239cab5ceb3854d83e0f44dc07f89",
+        "001bafe2ff33a57f0b2822bfabd9b2df",
+        "aa9da3cfa02bb52bd417cb21f62fd0d5",
+        "fa725fbd6a4e91610ac62dad839def05",
+        "67f46a2979bb488004be156ec98350d4",
+        "c2ad9cb5a2f5d3dae44707a8aa093a7c",
+        "7bda88fe6b09f1fc7b2914a986a0919b",
+        "9fd68d8e637f39e5855f2af76b23b48a",
+        "23e22e78e680d8201f226073419bbef9",
+        "06634694f483e2056cae82a5926502ad",
+        "ab6737e34195fb20a1ad9180e040b698",
+        "5361a68322a11ed84adf2678d2d955de",
+        "c701877e241f9876cf0337b9596a6ff8",
+        "6aae96f8a1a87ede4d6f7d1df11eb443",
+        "dcd98da537935eeaa37e084626b70517"
+      ],
+      "recovered_secret_digest": "35ba393ffc96bb9908d756ef4e579232ce5abd18b2163377ead867d79ba60726",
+      "secret_commitment": "a583c5ef4621fe729662571b2bcd8db8d64f575e00eaa26dc89b9ccc283da068",
+      "secret_recovered": true,
+      "seed": "707163642d636b7420726570726f64756369626c652073656564207630303032",
+      "table_roots": [
+        "2a707f1056a5c0b89248b90fd711c670b91ac3125de8d479b285d6925aa209be",
+        "db8d87cf286bf00fbce349adea0a2a04926a25d5f52cd9d0ebde9da7c313d4f6"
+      ],
+      "target": "0xa55a",
+      "witness_stack": [
+        "84981793070e77f805bc0762372b46dd101dc49f",
+        "e7fbcaba0e60d825fb862cd192ef475853e501b6",
+        "03",
+        "4ac50855fdb9c23351d1739744589484b30e13aa",
+        "06",
+        "77dc9d66709007a63be8f54354e5a35cd40050f2",
+        "03",
+        "fc1b8b2f3ae450c2461b677b8993cfcf8564cd06",
+        "a8d52cc84eec2e05936ec6403d12348a28be490f",
+        "02",
+        "5ca4e8a93e901916b0262d49169ea0b2a5cc8a93",
+        "03",
+        "ccfd60789bc34f37fe548f4365c349d51615d65f",
+        "02"
+      ]
+    }
+  ]
+}

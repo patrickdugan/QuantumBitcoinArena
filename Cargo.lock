@@ -588,6 +588,7 @@ dependencies = [
 name = "pqcd-ckt"
 version = "0.1.0"
 dependencies = [
+ "bitcoin",
  "bitvec",
  "ckt-gobble",
  "hex",
