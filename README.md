@@ -1,4 +1,4 @@
-# pq-conditional-disclosure
+﻿# QuantumBitcoinArena
 
 Research prototype: can a Bitcoin verifier authenticate and selectively reveal **garbled-circuit input
 labels using only hashes**, at materially lower Script cost than per-bit Lamport commitments? The
@@ -56,3 +56,4 @@ Full commands and pins are in section 10 of the research note. On Windows use th
 
 Security statements are arguments plus tests, tagged in `docs/security.md` as exhaustive-tested, argued or assumed. Nothing is
 machine-checked, the garbled-circuit layer is taken as given, and Mosaic was read but not run or audited.
+
