@@ -287,7 +287,7 @@ fn main() {
         Scheme::Acw { k: 4, l: 16, hash: HashKind::Sha256 },
         Scheme::Acw { k: 5, l: 16, hash: h20 },
     ];
-    let sizes: Vec<usize> = if quick { vec![1_000, 10_000] } else { vec![1_000, 10_000, 100_000] };
+    let sizes: Vec<usize> = if quick { vec![1_056, 10_000] } else { vec![1_056, 1_000, 10_000, 100_000] };
     let mut rows = vec![];
     let mut baselines = vec![];
     for &n in &sizes {

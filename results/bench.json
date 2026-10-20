@@ -253,21 +253,528 @@
     {
       "bits_per_digit": 1,
       "chains_per_digit": 2,
+      "digits": 1056,
+      "hash": "ripemd160",
+      "inputs": 3,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 3.1989,
+        "commitment_bytes": 42240,
+        "open_ms": 1.0981,
+        "peak_heap_bytes": {
+          "commit": 118405,
+          "script_build": 272212,
+          "verify": 65556
+        },
+        "script_build_ms": 1.6657,
+        "verify_ms": 0.9679000000000001
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 71.5028409090909,
+        "marginal_vb_per_bit_canonical": 17.75,
+        "marginal_vb_per_bit_random": 17.87890625,
+        "revealed_item_bytes": 23760,
+        "script_bytes": 51747,
+        "tx_vb_per_bit": 18.040482954545453,
+        "tx_vbytes_total": 19050.75,
+        "witness_bytes_per_bit": 71.61458333333333,
+        "witness_bytes_total": 75625,
+        "witness_items": 2112,
+        "witness_vb_per_bit": 17.903645833333332,
+        "witness_vbytes_total": 18906.25
+      },
+      "scheme": "lamport-ripemd160",
+      "script_execution": {
+        "hash_opcodes_executed": 1056,
+        "hash_opcodes_per_bit": 1.0,
+        "opcodes_executed": 4227,
+        "peak_stack_items": 990,
+        "steps": 9507,
+        "sum_exec_micros": 2089,
+        "wall_ms": 2.166
+      },
+      "security": {
+        "chain_loss_bits": 0.0,
+        "digest_bits": 160,
+        "evaluator_classical": 149.95560588064154,
+        "evaluator_quantum_iterations": 74.97780294032077,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 1056
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 1,
+      "chains_per_digit": 2,
+      "digits": 1056,
+      "hash": "ripemd160",
+      "inputs": 2,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 2.5265,
+        "commitment_bytes": 42240,
+        "open_ms": 1.138,
+        "peak_heap_bytes": {
+          "commit": 118407,
+          "script_build": 340640,
+          "verify": 65556
+        },
+        "script_build_ms": 1.5282,
+        "verify_ms": 0.7525999999999999
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 70.00189393939394,
+        "marginal_vb_per_bit_canonical": 17.5,
+        "marginal_vb_per_bit_random": 17.5,
+        "revealed_item_bytes": 22176,
+        "script_bytes": 51746,
+        "tx_vb_per_bit": 17.616950757575758,
+        "tx_vbytes_total": 18603.5,
+        "witness_bytes_per_bit": 70.07575757575758,
+        "witness_bytes_total": 74000,
+        "witness_items": 1056,
+        "witness_vb_per_bit": 17.518939393939394,
+        "witness_vbytes_total": 18500.0
+      },
+      "scheme": "lamport-nobit-ripemd160",
+      "script_execution": {
+        "hash_opcodes_executed": 1056,
+        "hash_opcodes_per_bit": 1.0,
+        "opcodes_executed": 7394,
+        "peak_stack_items": 992,
+        "steps": 9506,
+        "sum_exec_micros": 2203,
+        "wall_ms": 2.2512
+      },
+      "security": {
+        "chain_loss_bits": 0.0,
+        "digest_bits": 160,
+        "evaluator_classical": 149.95560588064154,
+        "evaluator_quantum_iterations": 74.97780294032077,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 1056
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 1,
+      "chains_per_digit": 2,
+      "digits": 1056,
+      "hash": "sha256",
+      "inputs": 3,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 2.3462,
+        "commitment_bytes": 67584,
+        "open_ms": 0.8439,
+        "peak_heap_bytes": {
+          "commit": 143718,
+          "script_build": 351064,
+          "verify": 65568
+        },
+        "script_build_ms": 1.163,
+        "verify_ms": 0.322
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 107.5028409090909,
+        "marginal_vb_per_bit_canonical": 26.75,
+        "marginal_vb_per_bit_random": 26.87890625,
+        "revealed_item_bytes": 36432,
+        "script_bytes": 77091,
+        "tx_vb_per_bit": 27.040482954545453,
+        "tx_vbytes_total": 28554.75,
+        "witness_bytes_per_bit": 107.61458333333333,
+        "witness_bytes_total": 113641,
+        "witness_items": 2112,
+        "witness_vb_per_bit": 26.903645833333332,
+        "witness_vbytes_total": 28410.25
+      },
+      "scheme": "lamport-sha256",
+      "script_execution": {
+        "hash_opcodes_executed": 1056,
+        "hash_opcodes_per_bit": 1.0,
+        "opcodes_executed": 4227,
+        "peak_stack_items": 990,
+        "steps": 9507,
+        "sum_exec_micros": 1670,
+        "wall_ms": 1.6789999999999998
+      },
+      "security": {
+        "chain_loss_bits": 0.0,
+        "digest_bits": 256,
+        "evaluator_classical": 245.95560588064154,
+        "evaluator_quantum_iterations": 122.97780294032077,
+        "garbler_collision_classical": 128.0,
+        "garbler_collision_quantum_bht": 85.33333333333333,
+        "targets": 1056
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 4,
+      "chains_per_digit": 2,
+      "digits": 264,
+      "hash": "hash160",
+      "inputs": 1,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 5.5225,
+        "commitment_bytes": 10560,
+        "open_ms": 3.6519999999999997,
+        "peak_heap_bytes": {
+          "commit": 29702,
+          "script_build": 170416,
+          "verify": 20096
+        },
+        "script_build_ms": 1.423,
+        "verify_ms": 2.7706
+      },
+      "offchain_table": {
+        "bits_per_digit": 4,
+        "build_ms_per_digit": 0.06449999999999999,
+        "build_s_total_extrapolated": 0.017027999999999995,
+        "log2_rows": 4.0,
+        "payload": "one 16-byte label per digit bit",
+        "payload_bytes": 64,
+        "peak_heap_bytes_one_digit": 6869,
+        "rows_per_digit": 16,
+        "sampled_digits": 24,
+        "table_bytes_per_bit": 264.0,
+        "table_bytes_per_digit": 1056,
+        "table_bytes_total": 278784,
+        "with_value_commitments_bytes_per_digit": 1568
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 45.25094696969697,
+        "marginal_vb_per_bit_canonical": 11.3125,
+        "marginal_vb_per_bit_random": 11.3046875,
+        "revealed_item_bytes": 11616,
+        "script_bytes": 36169,
+        "tx_vb_per_bit": 11.381392045454545,
+        "tx_vbytes_total": 12018.75,
+        "witness_bytes_per_bit": 45.28882575757576,
+        "witness_bytes_total": 47825,
+        "witness_items": 792,
+        "witness_vb_per_bit": 11.32220643939394,
+        "witness_vbytes_total": 11956.25
+      },
+      "scheme": "acw-k2-l16-hash160",
+      "script_execution": {
+        "hash_opcodes_executed": 3960,
+        "hash_opcodes_per_bit": 3.75,
+        "opcodes_executed": 16897,
+        "peak_stack_items": 795,
+        "steps": 25609,
+        "sum_exec_micros": 4980,
+        "wall_ms": 4.9875
+      },
+      "security": {
+        "chain_loss_bits": 4.0,
+        "digest_bits": 160,
+        "evaluator_classical": 146.95560588064154,
+        "evaluator_quantum_iterations": 73.47780294032077,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 528
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 8,
+      "chains_per_digit": 4,
+      "digits": 132,
+      "hash": "hash160",
+      "inputs": 1,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 3.1196,
+        "commitment_bytes": 10560,
+        "open_ms": 2.9116,
+        "peak_heap_bytes": {
+          "commit": 26533,
+          "script_build": 130120,
+          "verify": 12784
+        },
+        "script_build_ms": 1.0443,
+        "verify_ms": 1.4255
+      },
+      "offchain_table": {
+        "bits_per_digit": 8,
+        "build_ms_per_digit": 1.4595166666666666,
+        "build_s_total_extrapolated": 0.19265619999999997,
+        "log2_rows": 8.426264754702098,
+        "payload": "one 16-byte label per digit bit",
+        "payload_bytes": 128,
+        "peak_heap_bytes_one_digit": 112053,
+        "rows_per_digit": 344,
+        "sampled_digits": 24,
+        "table_bytes_per_bit": 5508.0,
+        "table_bytes_per_digit": 44064,
+        "table_bytes_total": 5816448,
+        "with_value_commitments_bytes_per_digit": 52256
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 37.359848484848484,
+        "marginal_vb_per_bit_canonical": 9.34375,
+        "marginal_vb_per_bit_random": 9.3310546875,
+        "revealed_item_bytes": 11863,
+        "script_bytes": 27589,
+        "tx_vb_per_bit": 9.408617424242424,
+        "tx_vbytes_total": 9935.5,
+        "witness_bytes_per_bit": 37.39772727272727,
+        "witness_bytes_total": 39492,
+        "witness_items": 924,
+        "witness_vb_per_bit": 9.349431818181818,
+        "witness_vbytes_total": 9873.0
+      },
+      "scheme": "acw-k4-l8-hash160",
+      "script_execution": {
+        "hash_opcodes_executed": 1848,
+        "hash_opcodes_per_bit": 1.75,
+        "opcodes_executed": 11701,
+        "peak_stack_items": 927,
+        "steps": 17029,
+        "sum_exec_micros": 2599,
+        "wall_ms": 2.6055
+      },
+      "security": {
+        "chain_loss_bits": 3.0,
+        "digest_bits": 160,
+        "evaluator_classical": 147.95560588064154,
+        "evaluator_quantum_iterations": 73.97780294032077,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 528
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 11,
+      "chains_per_digit": 4,
+      "digits": 96,
+      "hash": "hash160",
+      "inputs": 1,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 4.184399999999999,
+        "commitment_bytes": 7680,
+        "open_ms": 3.6888,
+        "peak_heap_bytes": {
+          "commit": 19334,
+          "script_build": 110176,
+          "verify": 10672
+        },
+        "script_build_ms": 1.1388,
+        "verify_ms": 2.7479
+      },
+      "offchain_table": {
+        "bits_per_digit": 11,
+        "build_ms_per_digit": 19.583370833333333,
+        "build_s_total_extrapolated": 1.8800036,
+        "log2_rows": 11.417852514885897,
+        "payload": "one 16-byte label per digit bit",
+        "payload_bytes": 176,
+        "peak_heap_bytes_one_digit": 1260277,
+        "rows_per_digit": 2736,
+        "sampled_digits": 24,
+        "table_bytes_per_bit": 43778.90909090909,
+        "table_bytes_per_digit": 481568,
+        "table_bytes_total": 46230528,
+        "with_value_commitments_bytes_per_digit": 547104
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 33.43087121212121,
+        "marginal_vb_per_bit_canonical": 8.363636363636363,
+        "marginal_vb_per_bit_random": 8.361860795454545,
+        "revealed_item_bytes": 8614,
+        "script_bytes": 26689,
+        "tx_vb_per_bit": 8.426373106060606,
+        "tx_vbytes_total": 8898.25,
+        "witness_bytes_per_bit": 33.46875,
+        "witness_bytes_total": 35343,
+        "witness_items": 672,
+        "witness_vb_per_bit": 8.3671875,
+        "witness_vbytes_total": 8835.75
+      },
+      "scheme": "acw-k4-l16-hash160",
+      "script_execution": {
+        "hash_opcodes_executed": 2880,
+        "hash_opcodes_per_bit": 2.727272727272727,
+        "opcodes_executed": 12450,
+        "peak_stack_items": 675,
+        "steps": 18913,
+        "sum_exec_micros": 3178,
+        "wall_ms": 3.1846
+      },
+      "security": {
+        "chain_loss_bits": 4.0,
+        "digest_bits": 160,
+        "evaluator_classical": 147.41503749927884,
+        "evaluator_quantum_iterations": 73.70751874963942,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 384
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 11,
+      "chains_per_digit": 4,
+      "digits": 96,
+      "hash": "sha256",
+      "inputs": 1,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 1.6418,
+        "commitment_bytes": 12288,
+        "open_ms": 2.0379,
+        "peak_heap_bytes": {
+          "commit": 23929,
+          "script_build": 124000,
+          "verify": 10696
+        },
+        "script_build_ms": 1.6186,
+        "verify_ms": 1.3073
+      },
+      "offchain_table": {
+        "bits_per_digit": 11,
+        "build_ms_per_digit": 20.6983875,
+        "build_s_total_extrapolated": 1.9870452,
+        "log2_rows": 11.417852514885897,
+        "payload": "one 16-byte label per digit bit",
+        "payload_bytes": 176,
+        "peak_heap_bytes_one_digit": 1261141,
+        "rows_per_digit": 2736,
+        "sampled_digits": 24,
+        "table_bytes_per_bit": 43778.90909090909,
+        "table_bytes_per_digit": 481568,
+        "table_bytes_total": 46230528,
+        "with_value_commitments_bytes_per_digit": 547104
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 42.15814393939394,
+        "marginal_vb_per_bit_canonical": 10.545454545454545,
+        "marginal_vb_per_bit_random": 10.543678977272727,
+        "revealed_item_bytes": 13222,
+        "script_bytes": 31297,
+        "tx_vb_per_bit": 10.608191287878787,
+        "tx_vbytes_total": 11202.25,
+        "witness_bytes_per_bit": 42.19602272727273,
+        "witness_bytes_total": 44559,
+        "witness_items": 672,
+        "witness_vb_per_bit": 10.549005681818182,
+        "witness_vbytes_total": 11139.75
+      },
+      "scheme": "acw-k4-l16-sha256",
+      "script_execution": {
+        "hash_opcodes_executed": 2880,
+        "hash_opcodes_per_bit": 2.727272727272727,
+        "opcodes_executed": 12450,
+        "peak_stack_items": 675,
+        "steps": 18913,
+        "sum_exec_micros": 2950,
+        "wall_ms": 2.9569
+      },
+      "security": {
+        "chain_loss_bits": 4.0,
+        "digest_bits": 256,
+        "evaluator_classical": 243.41503749927884,
+        "evaluator_quantum_iterations": 121.70751874963942,
+        "garbler_collision_classical": 128.0,
+        "garbler_collision_quantum_bht": 85.33333333333333,
+        "targets": 384
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 15,
+      "chains_per_digit": 5,
+      "digits": 71,
+      "hash": "hash160",
+      "inputs": 1,
+      "nbits": 1056,
+      "offchain_compute": {
+        "commit_ms": 3.7670999999999997,
+        "commitment_bytes": 7100,
+        "open_ms": 3.7642,
+        "peak_heap_bytes": {
+          "commit": 17458,
+          "script_build": 105228,
+          "verify": 12996
+        },
+        "script_build_ms": 1.0693,
+        "verify_ms": 2.0313000000000003
+      },
+      "offchain_table": {
+        "bits_per_digit": 15,
+        "build_ms_per_digit": 313.67875,
+        "build_s_total_extrapolated": 22.27119125,
+        "log2_rows": 15.261507309202056,
+        "payload": "one 16-byte label per digit bit",
+        "payload_bytes": 240,
+        "peak_heap_bytes_one_digit": 21441941,
+        "rows_per_digit": 39280,
+        "sampled_digits": 2,
+        "table_bytes_per_bit": 628482.1333333333,
+        "table_bytes_per_digit": 9427232,
+        "table_bytes_total": 669333472,
+        "with_value_commitments_bytes_per_digit": 10475808
+      },
+      "onchain": {
+        "authenticated_bytes_per_bit": 30.977272727272727,
+        "marginal_vb_per_bit_canonical": 7.683333333333334,
+        "marginal_vb_per_bit_random": 7.680729166666667,
+        "revealed_item_bytes": 8003,
+        "script_bytes": 24709,
+        "tx_vb_per_bit": 7.812973484848484,
+        "tx_vbytes_total": 8250.5,
+        "witness_bytes_per_bit": 31.015151515151516,
+        "witness_bytes_total": 32752,
+        "witness_items": 639,
+        "witness_vb_per_bit": 7.753787878787879,
+        "witness_vbytes_total": 8188.0
+      },
+      "scheme": "acw-k5-l16-hash160",
+      "script_execution": {
+        "hash_opcodes_executed": 2627,
+        "hash_opcodes_per_bit": 2.487689393939394,
+        "opcodes_executed": 11603,
+        "peak_stack_items": 642,
+        "steps": 17538,
+        "sum_exec_micros": 2506,
+        "wall_ms": 2.5098
+      },
+      "security": {
+        "chain_loss_bits": 4.0,
+        "digest_bits": 160,
+        "evaluator_classical": 147.52832478560796,
+        "evaluator_quantum_iterations": 73.76416239280398,
+        "garbler_collision_classical": 80.0,
+        "garbler_collision_quantum_bht": 53.333333333333336,
+        "targets": 355
+      },
+      "transactions": 1
+    },
+    {
+      "bits_per_digit": 1,
+      "chains_per_digit": 2,
       "digits": 1000,
       "hash": "ripemd160",
       "inputs": 3,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 3.6116,
+        "commit_ms": 3.1633999999999998,
         "commitment_bytes": 40000,
-        "open_ms": 1.3541,
+        "open_ms": 1.1827,
         "peak_heap_bytes": {
           "commit": 112133,
           "script_build": 272212,
           "verify": 32788
         },
-        "script_build_ms": 2.2373,
-        "verify_ms": 1.3860000000000001
+        "script_build_ms": 1.4403000000000001,
+        "verify_ms": 0.6265
       },
       "onchain": {
         "authenticated_bytes_per_bit": 71.504,
@@ -290,8 +797,8 @@
         "opcodes_executed": 4003,
         "peak_stack_items": 990,
         "steps": 9003,
-        "sum_exec_micros": 2075,
-        "wall_ms": 2.1765
+        "sum_exec_micros": 1478,
+        "wall_ms": 1.4841
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -312,16 +819,16 @@
       "inputs": 2,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 2.8817999999999997,
+        "commit_ms": 2.101,
         "commitment_bytes": 40000,
-        "open_ms": 1.0634,
+        "open_ms": 0.7453,
         "peak_heap_bytes": {
           "commit": 112135,
           "script_build": 340640,
           "verify": 32788
         },
-        "script_build_ms": 2.1552,
-        "verify_ms": 0.9317000000000001
+        "script_build_ms": 1.3010000000000002,
+        "verify_ms": 0.6870999999999999
       },
       "onchain": {
         "authenticated_bytes_per_bit": 70.002,
@@ -344,8 +851,8 @@
         "opcodes_executed": 7002,
         "peak_stack_items": 992,
         "steps": 9002,
-        "sum_exec_micros": 2244,
-        "wall_ms": 2.2779
+        "sum_exec_micros": 1756,
+        "wall_ms": 1.7622
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -366,16 +873,16 @@
       "inputs": 3,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 2.4733,
+        "commit_ms": 1.8622999999999998,
         "commitment_bytes": 64000,
-        "open_ms": 0.9903,
+        "open_ms": 0.7057,
         "peak_heap_bytes": {
           "commit": 136102,
           "script_build": 351064,
           "verify": 32800
         },
-        "script_build_ms": 2.25,
-        "verify_ms": 0.614
+        "script_build_ms": 1.08,
+        "verify_ms": 0.5004000000000001
       },
       "onchain": {
         "authenticated_bytes_per_bit": 107.504,
@@ -398,8 +905,8 @@
         "opcodes_executed": 4003,
         "peak_stack_items": 990,
         "steps": 9003,
-        "sum_exec_micros": 1838,
-        "wall_ms": 1.8492
+        "sum_exec_micros": 1532,
+        "wall_ms": 1.5413000000000001
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -420,22 +927,22 @@
       "inputs": 1,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 5.404800000000001,
+        "commit_ms": 4.4469,
         "commitment_bytes": 10000,
-        "open_ms": 4.338299999999999,
+        "open_ms": 3.6243,
         "peak_heap_bytes": {
           "commit": 28134,
           "script_build": 166160,
           "verify": 11792
         },
-        "script_build_ms": 1.9176,
-        "verify_ms": 3.07
+        "script_build_ms": 1.1151,
+        "verify_ms": 3.0191
       },
       "offchain_table": {
         "bits_per_digit": 4,
-        "build_ms_per_digit": 0.066275,
-        "build_s_total_extrapolated": 0.01656875,
-        "build_s_total_measured": 0.0185562,
+        "build_ms_per_digit": 0.07872083333333334,
+        "build_s_total_extrapolated": 0.019680208333333334,
+        "build_s_total_measured": 0.0182426,
         "log2_rows": 4.0,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 64,
@@ -468,8 +975,8 @@
         "opcodes_executed": 16001,
         "peak_stack_items": 753,
         "steps": 24251,
-        "sum_exec_micros": 5786,
-        "wall_ms": 5.8006
+        "sum_exec_micros": 3361,
+        "wall_ms": 3.3669
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -490,22 +997,22 @@
       "inputs": 1,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 3.0713,
+        "commit_ms": 3.1029,
         "commitment_bytes": 10000,
-        "open_ms": 4.4495000000000005,
+        "open_ms": 2.4979,
         "peak_heap_bytes": {
           "commit": 25133,
           "script_build": 126264,
           "verify": 8576
         },
-        "script_build_ms": 1.866,
-        "verify_ms": 2.5233
+        "script_build_ms": 0.9437,
+        "verify_ms": 1.4054
       },
       "offchain_table": {
         "bits_per_digit": 8,
-        "build_ms_per_digit": 1.8447041666666666,
-        "build_s_total_extrapolated": 0.23058802083333332,
-        "build_s_total_measured": 0.1793465,
+        "build_ms_per_digit": 1.3540958333333333,
+        "build_s_total_extrapolated": 0.16926197916666666,
+        "build_s_total_measured": 0.1704704,
         "log2_rows": 8.426264754702098,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 128,
@@ -538,8 +1045,8 @@
         "opcodes_executed": 11078,
         "peak_stack_items": 878,
         "steps": 16126,
-        "sum_exec_micros": 4310,
-        "wall_ms": 4.3237
+        "sum_exec_micros": 2977,
+        "wall_ms": 2.9873
       },
       "security": {
         "chain_loss_bits": 3.0,
@@ -560,22 +1067,22 @@
       "inputs": 1,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 3.9069,
+        "commit_ms": 3.6337,
         "commitment_bytes": 7280,
-        "open_ms": 3.7956000000000003,
+        "open_ms": 3.699,
         "peak_heap_bytes": {
           "commit": 18334,
           "script_build": 107448,
           "verify": 10592
         },
-        "script_build_ms": 1.1337000000000002,
-        "verify_ms": 2.6094
+        "script_build_ms": 1.1676,
+        "verify_ms": 2.3542
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 22.4707125,
-        "build_s_total_extrapolated": 2.0448348375,
-        "build_s_total_measured": 2.1412639,
+        "build_ms_per_digit": 18.015133333333335,
+        "build_s_total_extrapolated": 1.6393771333333333,
+        "build_s_total_measured": 2.6445944,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -608,8 +1115,8 @@
         "opcodes_executed": 11802,
         "peak_stack_items": 640,
         "steps": 17928,
-        "sum_exec_micros": 3292,
-        "wall_ms": 3.3002000000000002
+        "sum_exec_micros": 3704,
+        "wall_ms": 3.7116
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -630,22 +1137,22 @@
       "inputs": 1,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 2.2064,
+        "commit_ms": 3.5805,
         "commitment_bytes": 11648,
-        "open_ms": 3.0945,
+        "open_ms": 3.7096,
         "peak_heap_bytes": {
           "commit": 22689,
           "script_build": 120552,
           "verify": 10616
         },
-        "script_build_ms": 2.0875999999999997,
-        "verify_ms": 1.7665
+        "script_build_ms": 2.8642,
+        "verify_ms": 2.343
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 31.868666666666666,
-        "build_s_total_extrapolated": 2.9000486666666667,
-        "build_s_total_measured": 3.007249,
+        "build_ms_per_digit": 29.50210416666667,
+        "build_s_total_extrapolated": 2.6846914791666667,
+        "build_s_total_measured": 2.8443045,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -678,8 +1185,8 @@
         "opcodes_executed": 11802,
         "peak_stack_items": 640,
         "steps": 17928,
-        "sum_exec_micros": 4253,
-        "wall_ms": 4.2655
+        "sum_exec_micros": 4907,
+        "wall_ms": 4.9261
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -700,22 +1207,22 @@
       "inputs": 1,
       "nbits": 1000,
       "offchain_compute": {
-        "commit_ms": 6.4506,
+        "commit_ms": 6.485,
         "commitment_bytes": 6700,
-        "open_ms": 6.3033,
+        "open_ms": 7.426699999999999,
         "peak_heap_bytes": {
           "commit": 16482,
           "script_build": 102540,
           "verify": 12916
         },
-        "script_build_ms": 3.3179,
-        "verify_ms": 4.4509
+        "script_build_ms": 2.4345999999999997,
+        "verify_ms": 5.3661
       },
       "offchain_table": {
         "bits_per_digit": 15,
-        "build_ms_per_digit": 554.4854,
-        "build_s_total_extrapolated": 37.1505218,
-        "build_s_total_measured": 33.3753017,
+        "build_ms_per_digit": 529.0133000000001,
+        "build_s_total_extrapolated": 35.44389110000001,
+        "build_s_total_measured": 30.8516875,
         "log2_rows": 15.261507309202056,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 240,
@@ -748,8 +1255,8 @@
         "opcodes_executed": 10946,
         "peak_stack_items": 606,
         "steps": 16550,
-        "sum_exec_micros": 7052,
-        "wall_ms": 7.069500000000001
+        "sum_exec_micros": 4315,
+        "wall_ms": 4.331899999999999
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -770,16 +1277,16 @@
       "inputs": 21,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 46.9447,
+        "commit_ms": 41.2694,
         "commitment_bytes": 400000,
-        "open_ms": 16.028000000000002,
+        "open_ms": 11.723799999999999,
         "peak_heap_bytes": {
           "commit": 1120133,
           "script_build": 1777140,
           "verify": 524308
         },
-        "script_build_ms": 29.2548,
-        "verify_ms": 15.4321
+        "script_build_ms": 33.3116,
+        "verify_ms": 21.1748
       },
       "onchain": {
         "authenticated_bytes_per_bit": 71.5021,
@@ -802,8 +1309,8 @@
         "opcodes_executed": 40021,
         "peak_stack_items": 990,
         "steps": 90021,
-        "sum_exec_micros": 34059,
-        "wall_ms": 34.6244
+        "sum_exec_micros": 32320,
+        "wall_ms": 32.756800000000005
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -824,16 +1331,16 @@
       "inputs": 11,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 42.0523,
+        "commit_ms": 52.5804,
         "commitment_bytes": 400000,
-        "open_ms": 12.8834,
+        "open_ms": 12.299900000000001,
         "peak_heap_bytes": {
           "commit": 1120135,
           "script_build": 1588328,
           "verify": 524308
         },
-        "script_build_ms": 26.4345,
-        "verify_ms": 16.2743
+        "script_build_ms": 34.331,
+        "verify_ms": 16.7788
       },
       "onchain": {
         "authenticated_bytes_per_bit": 70.0011,
@@ -856,8 +1363,8 @@
         "opcodes_executed": 70011,
         "peak_stack_items": 992,
         "steps": 90011,
-        "sum_exec_micros": 42337,
-        "wall_ms": 42.5687
+        "sum_exec_micros": 48218,
+        "wall_ms": 48.5178
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -878,16 +1385,16 @@
       "inputs": 21,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 35.019,
+        "commit_ms": 25.008499999999998,
         "commitment_bytes": 640000,
-        "open_ms": 15.4192,
+        "open_ms": 14.021799999999999,
         "peak_heap_bytes": {
           "commit": 1360102,
           "script_build": 2405280,
           "verify": 524320
         },
-        "script_build_ms": 29.9034,
-        "verify_ms": 12.2146
+        "script_build_ms": 32.992,
+        "verify_ms": 11.166
       },
       "onchain": {
         "authenticated_bytes_per_bit": 107.5021,
@@ -910,8 +1417,8 @@
         "opcodes_executed": 40021,
         "peak_stack_items": 990,
         "steps": 90021,
-        "sum_exec_micros": 24607,
-        "wall_ms": 24.7287
+        "sum_exec_micros": 30374,
+        "wall_ms": 30.5383
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -932,21 +1439,21 @@
       "inputs": 8,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 78.7945,
+        "commit_ms": 65.86930000000001,
         "commitment_bytes": 100000,
-        "open_ms": 66.02289999999999,
+        "open_ms": 52.5393,
         "peak_heap_bytes": {
           "commit": 280134,
           "script_build": 857152,
           "verify": 152672
         },
-        "script_build_ms": 18.7545,
-        "verify_ms": 45.4775
+        "script_build_ms": 25.4523,
+        "verify_ms": 47.1778
       },
       "offchain_table": {
         "bits_per_digit": 4,
-        "build_ms_per_digit": 0.1548125,
-        "build_s_total_extrapolated": 0.38703125,
+        "build_ms_per_digit": 0.06841666666666667,
+        "build_s_total_extrapolated": 0.17104166666666665,
         "log2_rows": 4.0,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 64,
@@ -979,8 +1486,8 @@
         "opcodes_executed": 160008,
         "peak_stack_items": 993,
         "steps": 242508,
-        "sum_exec_micros": 61968,
-        "wall_ms": 62.0845
+        "sum_exec_micros": 64802,
+        "wall_ms": 64.92530000000001
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1001,21 +1508,21 @@
       "inputs": 9,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 44.9732,
+        "commit_ms": 36.9948,
         "commitment_bytes": 100000,
-        "open_ms": 37.396100000000004,
+        "open_ms": 29.5524,
         "peak_heap_bytes": {
           "commit": 250133,
           "script_build": 699928,
           "verify": 88016
         },
-        "script_build_ms": 15.7062,
-        "verify_ms": 22.6834
+        "script_build_ms": 11.6829,
+        "verify_ms": 19.0081
       },
       "offchain_table": {
         "bits_per_digit": 8,
-        "build_ms_per_digit": 1.9382958333333333,
-        "build_s_total_extrapolated": 2.4228697916666664,
+        "build_ms_per_digit": 1.6929208333333332,
+        "build_s_total_extrapolated": 2.1161510416666665,
         "log2_rows": 8.426264754702098,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 128,
@@ -1048,8 +1555,8 @@
         "opcodes_executed": 110791,
         "peak_stack_items": 990,
         "steps": 161259,
-        "sum_exec_micros": 40982,
-        "wall_ms": 41.0725
+        "sum_exec_micros": 32444,
+        "wall_ms": 32.5306
       },
       "security": {
         "chain_loss_bits": 3.0,
@@ -1070,21 +1577,21 @@
       "inputs": 7,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 59.0548,
+        "commit_ms": 46.8275,
         "commitment_bytes": 72800,
-        "open_ms": 53.9546,
+        "open_ms": 49.3559,
         "peak_heap_bytes": {
           "commit": 182134,
           "script_build": 707416,
           "verify": 52368
         },
-        "script_build_ms": 19.494799999999998,
-        "verify_ms": 34.9934
+        "script_build_ms": 14.764,
+        "verify_ms": 29.5517
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 27.015941666666667,
-        "build_s_total_extrapolated": 24.584506916666665,
+        "build_ms_per_digit": 26.69462916666667,
+        "build_s_total_extrapolated": 24.29211254166667,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -1117,8 +1624,8 @@
         "opcodes_executed": 118111,
         "peak_stack_items": 990,
         "steps": 179277,
-        "sum_exec_micros": 52248,
-        "wall_ms": 52.3311
+        "sum_exec_micros": 57605,
+        "wall_ms": 57.7106
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1139,21 +1646,21 @@
       "inputs": 7,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 21.386499999999998,
+        "commit_ms": 24.3189,
         "commitment_bytes": 116480,
-        "open_ms": 29.889200000000002,
+        "open_ms": 33.8404,
         "peak_heap_bytes": {
           "commit": 225801,
           "script_build": 757240,
           "verify": 52392
         },
-        "script_build_ms": 20.2987,
-        "verify_ms": 17.4476
+        "script_build_ms": 18.301000000000002,
+        "verify_ms": 17.6692
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 28.458483333333334,
-        "build_s_total_extrapolated": 25.89721983333333,
+        "build_ms_per_digit": 24.869016666666667,
+        "build_s_total_extrapolated": 22.630805166666665,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -1186,8 +1693,8 @@
         "opcodes_executed": 118111,
         "peak_stack_items": 990,
         "steps": 179277,
-        "sum_exec_micros": 29309,
-        "wall_ms": 29.3872
+        "sum_exec_micros": 30842,
+        "wall_ms": 30.9163
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1208,21 +1715,21 @@
       "inputs": 7,
       "nbits": 10000,
       "offchain_compute": {
-        "commit_ms": 54.344,
+        "commit_ms": 45.1057,
         "commitment_bytes": 66700,
-        "open_ms": 49.3756,
+        "open_ms": 37.7597,
         "peak_heap_bytes": {
           "commit": 162882,
           "script_build": 686648,
           "verify": 53588
         },
-        "script_build_ms": 17.969700000000003,
-        "verify_ms": 34.180099999999996
+        "script_build_ms": 16.086199999999998,
+        "verify_ms": 26.0348
       },
       "offchain_table": {
         "bits_per_digit": 15,
-        "build_ms_per_digit": 466.83914999999996,
-        "build_s_total_extrapolated": 311.38171305,
+        "build_ms_per_digit": 429.7868,
+        "build_s_total_extrapolated": 286.66779560000003,
         "log2_rows": 15.261507309202056,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 240,
@@ -1255,8 +1762,8 @@
         "opcodes_executed": 109067,
         "peak_stack_items": 993,
         "steps": 164756,
-        "sum_exec_micros": 50933,
-        "wall_ms": 51.0196
+        "sum_exec_micros": 36611,
+        "wall_ms": 36.7047
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1277,16 +1784,16 @@
       "inputs": 203,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 472.4995,
+        "commit_ms": 469.94849999999997,
         "commitment_bytes": 4000000,
-        "open_ms": 158.0669,
+        "open_ms": 138.5305,
         "peak_heap_bytes": {
           "commit": 11200133,
           "script_build": 16993804,
           "verify": 4194324
         },
-        "script_build_ms": 299.0732,
-        "verify_ms": 154.6103
+        "script_build_ms": 310.5992,
+        "verify_ms": 150.99589999999998
       },
       "onchain": {
         "authenticated_bytes_per_bit": 71.50203,
@@ -1309,8 +1816,8 @@
         "opcodes_executed": 400203,
         "peak_stack_items": 990,
         "steps": 900203,
-        "sum_exec_micros": 291960,
-        "wall_ms": 293.7919
+        "sum_exec_micros": 262524,
+        "wall_ms": 265.57439999999997
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -1331,16 +1838,16 @@
       "inputs": 102,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 412.6664,
+        "commit_ms": 417.65340000000003,
         "commitment_bytes": 4000000,
-        "open_ms": 121.82,
+        "open_ms": 135.63330000000002,
         "peak_heap_bytes": {
           "commit": 11200135,
           "script_build": 14203840,
           "verify": 4194324
         },
-        "script_build_ms": 309.39529999999996,
-        "verify_ms": 146.1548
+        "script_build_ms": 257.5364,
+        "verify_ms": 145.4364
       },
       "onchain": {
         "authenticated_bytes_per_bit": 70.00102,
@@ -1363,8 +1870,8 @@
         "opcodes_executed": 700102,
         "peak_stack_items": 992,
         "steps": 900102,
-        "sum_exec_micros": 396189,
-        "wall_ms": 397.9334
+        "sum_exec_micros": 345764,
+        "wall_ms": 347.29019999999997
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -1385,16 +1892,16 @@
       "inputs": 203,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 344.2539,
+        "commit_ms": 290.0312,
         "commitment_bytes": 6400000,
-        "open_ms": 156.2616,
+        "open_ms": 137.69799999999998,
         "peak_heap_bytes": {
           "commit": 13600102,
           "script_build": 23175856,
           "verify": 4194336
         },
-        "script_build_ms": 378.68429999999995,
-        "verify_ms": 127.94349999999999
+        "script_build_ms": 355.8732,
+        "verify_ms": 113.78620000000001
       },
       "onchain": {
         "authenticated_bytes_per_bit": 107.50203,
@@ -1417,8 +1924,8 @@
         "opcodes_executed": 400203,
         "peak_stack_items": 990,
         "steps": 900203,
-        "sum_exec_micros": 270118,
-        "wall_ms": 271.4375
+        "sum_exec_micros": 245878,
+        "wall_ms": 247.6197
       },
       "security": {
         "chain_loss_bits": 0.0,
@@ -1439,21 +1946,21 @@
       "inputs": 76,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 832.179,
+        "commit_ms": 743.5874,
         "commitment_bytes": 1000000,
-        "open_ms": 634.7162,
+        "open_ms": 564.3422999999999,
         "peak_heap_bytes": {
           "commit": 2800134,
           "script_build": 8116160,
           "verify": 1250176
         },
-        "script_build_ms": 213.7998,
-        "verify_ms": 452.274
+        "script_build_ms": 218.9828,
+        "verify_ms": 415.6902
       },
       "offchain_table": {
         "bits_per_digit": 4,
-        "build_ms_per_digit": 0.11213333333333332,
-        "build_s_total_extrapolated": 2.8033333333333332,
+        "build_ms_per_digit": 0.10238333333333334,
+        "build_s_total_extrapolated": 2.5595833333333333,
         "log2_rows": 4.0,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 64,
@@ -1486,8 +1993,8 @@
         "opcodes_executed": 1600076,
         "peak_stack_items": 993,
         "steps": 2425076,
-        "sum_exec_micros": 746319,
-        "wall_ms": 748.3659
+        "sum_exec_micros": 660741,
+        "wall_ms": 662.9087000000001
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1508,21 +2015,21 @@
       "inputs": 89,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 468.3873,
+        "commit_ms": 416.311,
         "commitment_bytes": 1000000,
-        "open_ms": 380.91760000000005,
+        "open_ms": 379.137,
         "peak_heap_bytes": {
           "commit": 2500133,
           "script_build": 6436600,
           "verify": 726768
         },
-        "script_build_ms": 157.0458,
-        "verify_ms": 238.11370000000002
+        "script_build_ms": 140.5385,
+        "verify_ms": 233.53799999999998
       },
       "offchain_table": {
         "bits_per_digit": 8,
-        "build_ms_per_digit": 2.341883333333333,
-        "build_s_total_extrapolated": 29.273541666666663,
+        "build_ms_per_digit": 1.9247791666666665,
+        "build_s_total_extrapolated": 24.059739583333332,
         "log2_rows": 8.426264754702098,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 128,
@@ -1555,8 +2062,8 @@
         "opcodes_executed": 1107903,
         "peak_stack_items": 990,
         "steps": 1612589,
-        "sum_exec_micros": 445398,
-        "wall_ms": 447.3489
+        "sum_exec_micros": 392999,
+        "wall_ms": 394.8293
       },
       "security": {
         "chain_loss_bits": 3.0,
@@ -1577,21 +2084,21 @@
       "inputs": 65,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 593.5527000000001,
+        "commit_ms": 545.544,
         "commitment_bytes": 727280,
-        "open_ms": 527.4463999999999,
+        "open_ms": 469.0321,
         "peak_heap_bytes": {
           "commit": 1818334,
           "script_build": 6771520,
           "verify": 674784
         },
-        "script_build_ms": 180.7707,
-        "verify_ms": 356.851
+        "script_build_ms": 158.14849999999998,
+        "verify_ms": 305.1641
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 26.372674999999997,
-        "build_s_total_extrapolated": 239.753988425,
+        "build_ms_per_digit": 27.28294583333333,
+        "build_s_total_extrapolated": 248.0292605708333,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -1624,8 +2131,8 @@
         "opcodes_executed": 1180012,
         "peak_stack_items": 990,
         "steps": 1790992,
-        "sum_exec_micros": 553392,
-        "wall_ms": 555.211
+        "sum_exec_micros": 468802,
+        "wall_ms": 470.8483
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1646,21 +2153,21 @@
       "inputs": 65,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 237.52609999999999,
+        "commit_ms": 254.34109999999998,
         "commitment_bytes": 1163648,
-        "open_ms": 337.286,
+        "open_ms": 290.31010000000003,
         "peak_heap_bytes": {
           "commit": 2254689,
           "script_build": 7214320,
           "verify": 674808
         },
-        "script_build_ms": 195.1517,
-        "verify_ms": 197.7778
+        "script_build_ms": 185.19469999999998,
+        "verify_ms": 170.1344
       },
       "offchain_table": {
         "bits_per_digit": 11,
-        "build_ms_per_digit": 29.394833333333334,
-        "build_s_total_extrapolated": 267.22842983333334,
+        "build_ms_per_digit": 27.41303333333333,
+        "build_s_total_extrapolated": 249.21188603333331,
         "log2_rows": 11.417852514885897,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 176,
@@ -1693,8 +2200,8 @@
         "opcodes_executed": 1180012,
         "peak_stack_items": 990,
         "steps": 1790992,
-        "sum_exec_micros": 350602,
-        "wall_ms": 351.8247
+        "sum_exec_micros": 332867,
+        "wall_ms": 334.3063
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1715,21 +2222,21 @@
       "inputs": 61,
       "nbits": 100000,
       "offchain_compute": {
-        "commit_ms": 577.2265,
+        "commit_ms": 505.6734000000001,
         "commitment_bytes": 666700,
-        "open_ms": 550.8043,
+        "open_ms": 492.3501,
         "peak_heap_bytes": {
           "commit": 1626882,
           "script_build": 6370348,
           "verify": 402964
         },
-        "script_build_ms": 211.6879,
-        "verify_ms": 376.9378
+        "script_build_ms": 174.7163,
+        "verify_ms": 297.25509999999997
       },
       "offchain_table": {
         "bits_per_digit": 15,
-        "build_ms_per_digit": 465.04679999999996,
-        "build_s_total_extrapolated": 3100.4670155999997,
+        "build_ms_per_digit": 435.05305,
+        "build_s_total_extrapolated": 2900.4986843499996,
         "log2_rows": 15.261507309202056,
         "payload": "one 16-byte label per digit bit",
         "payload_bytes": 240,
@@ -1762,8 +2269,8 @@
         "opcodes_executed": 1090158,
         "peak_stack_items": 993,
         "steps": 1646810,
-        "sum_exec_micros": 500904,
-        "wall_ms": 502.7387
+        "sum_exec_micros": 465497,
+        "wall_ms": 467.2381
       },
       "security": {
         "chain_loss_bits": 4.0,
@@ -1778,6 +2285,28 @@
     }
   ],
   "schnorr_adaptor_baseline": [
+    {
+      "bits_per_digit": 8,
+      "digits": 132,
+      "hash": "n/a (BIP-340 on secp256k1)",
+      "inputs": 1,
+      "nbits": 1056,
+      "note": "cost model only: size-exact dummy signatures; one OP_CODESEPARATOR <pk> OP_CHECKSIGVERIFY per 8-bit wide label",
+      "onchain": {
+        "authenticated_bytes_per_bit": 12.5,
+        "revealed_item_bytes": 8580,
+        "script_bytes": 4620,
+        "tx_vb_per_bit": 3.1931818181818183,
+        "tx_vbytes_total": 3372.0,
+        "witness_bytes_per_bit": 12.535984848484848,
+        "witness_bytes_total": 13238,
+        "witness_vb_per_bit": 3.133996212121212,
+        "witness_vbytes_total": 3309.5
+      },
+      "post_quantum": false,
+      "scheme": "schnorr-adaptor-baseline",
+      "transactions": 1
+    },
     {
       "bits_per_digit": 8,
       "digits": 125,

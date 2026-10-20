@@ -5,14 +5,18 @@
 //! RIPEMD-160 or SHA-256 and is not a proof. See `docs/security.md` for the argument that
 //! ties these numbers to the scheme and for the assumptions behind each row.
 //!
-//! Two different adversaries need two different notions:
+//! What the script argument actually needs from the hash:
 //!
-//! * **Evaluator (label privacy).** After one opening it holds `T` revealed chain
-//!   elements. To unlock a second row it must invert the hash at one of them (a *backward*
-//!   step). Generic cost: `2^n / T` hash evaluations classically; Grover with `T` marked
-//!   items needs about `sqrt(2^n / T)` sequential iterations.
-//! * **Garbler (equivocation).** It chooses the terminals, so it only needs a *collision*
-//!   (two chain paths meeting). Classically `2^(n/2)`; Brassard-Hoyer-Tapp needs
+//! * **Evaluator (unforgeability / label privacy).** After one opening it holds `T` revealed
+//!   chain elements and the public terminals. To open a second codeword it must find, on some
+//!   chain, a *preimage* of a public or revealed value under `H^m` (a backward step). Generic
+//!   cost: `2^n / T` evaluations classically; Grover with `T` marked items needs about
+//!   `sqrt(2^n / T)` sequential iterations. **This is the figure that bounds the scheme.**
+//! * **Garbler.** It knows every chain secret, so it can already open any codeword it likes;
+//!   Bitcoin's single-spend rule, not a hash, stops it opening two. Collision resistance is
+//!   therefore *not* used by the script argument. The collision figures below are reported
+//!   because hash commitments elsewhere in a protocol (table roots, circuit commitments,
+//!   a hash of all terminals) do need it: classically `2^(n/2)`; Brassard-Hoyer-Tapp needs
 //!   `2^(n/3)` queries but also `2^(n/3)` quantum-accessible memory, which makes it
 //!   non-competitive once memory is costed (Chailloux, Naya-Plasencia, Schrottenloher 2017).
 
@@ -35,7 +39,7 @@ pub struct Security {
     pub evaluator_classical: f64,
     /// Quantum cost in sequential Grover iterations (multi-target).
     pub evaluator_quantum_iterations: f64,
-    /// Classical generic collision cost for garbler equivocation.
+    /// Classical generic collision cost (needed by hash commitments elsewhere, not by the script argument).
     pub garbler_collision_classical: f64,
     /// BHT collision queries (needs the same amount of qRAM; shown for completeness).
     pub garbler_collision_quantum_bht: f64,
