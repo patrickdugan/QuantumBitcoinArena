@@ -1,0 +1,15 @@
+[workspace]
+members = ["crates/pqcd", "crates/pqcd-ckt"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Patrick Dugan"]
+
+[profile.release]
+opt-level = 3
+debug = false
+
+[profile.test]
+opt-level = 2

@@ -1,0 +1,22 @@
+[package]
+name = "pqcd"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "Research prototype: hash-based conditional disclosure of garbled-circuit input labels under Bitcoin Script (Lamport vs Antichain Winternitz)"
+
+[dependencies]
+bitcoin = { version = "0.32.5", features = ["rand-std"] }
+rand = "0.8"
+rand_chacha = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+bitcoin-scriptexec = { git = "https://github.com/BitVM/rust-bitcoin-scriptexec", rev = "ba96bc2bd76774c9d1b011461cb79d983c2c43a1", default-features = false, features = ["json"] }
+ureq = { version = "2", default-features = false, features = ["json"] }
+
+[dev-dependencies]
+proptest = "1"
+
+[lints.rust]
+unsafe_code = "forbid"
